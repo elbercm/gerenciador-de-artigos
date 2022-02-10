@@ -42,7 +42,7 @@ module.exports = (app) => {
         }
       }
     } catch (e) {
-      // Problema com o Token
+      // problema com o token
     }
 
     res.send(false);

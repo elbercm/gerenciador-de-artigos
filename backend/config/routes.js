@@ -15,7 +15,8 @@ module.exports = (app) => {
     .route("/users/:id")
     .all(app.config.passport.authenticate())
     .put(admin(app.api.user.save))
-    .get(admin(app.api.user.getById));
+    .get(admin(app.api.user.getById))
+    .delete(admin(app.api.user.remove));
 
   app
     .route("/categories")
@@ -23,7 +24,7 @@ module.exports = (app) => {
     .get(admin(app.api.category.get))
     .post(admin(app.api.category.save));
 
-  // Cuidado com a Ordem da URL! Tem que vir antes da /categories/:id
+  // Cuidado com ordem! Tem que vir antes de /categories/:id
   app
     .route("/categories/tree")
     .all(app.config.passport.authenticate())
@@ -53,4 +54,9 @@ module.exports = (app) => {
     .route("/categories/:id/articles")
     .all(app.config.passport.authenticate())
     .get(app.api.article.getByCategory);
+
+  // app
+  //   .route("/stats")
+  //   .all(app.config.passport.authenticate())
+  //   .get(app.api.stat.get);
 };
