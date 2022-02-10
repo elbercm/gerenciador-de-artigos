@@ -1,6 +1,6 @@
 <template>
 	<div id="app">
-		<Header />
+		<Header title="Gerenciador de Artigos" :hideToggle="true" />
 		<Menu />
 		<Content />
 		<Footer />
