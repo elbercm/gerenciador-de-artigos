@@ -1,14 +1,15 @@
 <template>
-  <header class="header">
-    <a class="toggle" @click="toggleMenu" v-if="!hideToggle">
-      <i class="fa fa-lg" :class="icon"></i>
-    </a>
-    <h1 class="title">
-      {{ title }}
-    </h1>
-    <UserDropdown v-if="!hideUserDropdown" />
-  </header>
+    <header class="header">
+        <a class="toggle" @click="toggleMenu" v-if="!hideToggle">
+            <i class="fa fa-lg" :class="icon"></i>
+        </a>
+        <h1 class="title">
+            <router-link to="/">{{ title }}</router-link>
+        </h1>
+        <UserDropdown v-if="!hideUserDropdown" />
+    </header>
 </template>
+
 
 <script>
 import UserDropdown from "./UserDropdown";
@@ -57,13 +58,11 @@ export default {
 .title a {
   color: #fff;
   text-decoration: none;
-  color: #fff;
-  justify-self: flex-start;
-  text-decoration: none;
+}
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.title a:hover {
+  color: #fff;
+  text-decoration: none;
 }
 
 header.header > a.toggle {
