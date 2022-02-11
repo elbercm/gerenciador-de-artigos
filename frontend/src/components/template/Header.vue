@@ -18,11 +18,15 @@ export default {
   },
   computed: {
     icon() {
-      return "fa-angle-left";
+      return this.$store.state.isMenuVisible
+        ? "fa-angle-left"
+        : "fa-angle-down";
     },
   },
   methods: {
-    toggleMenu() {},
+    toggleMenu() {
+      this.$store.commit("toggleMenu");
+    },
   },
 };
 </script>
@@ -57,6 +61,17 @@ export default {
   align-items: center;
 }
 
+header.header > a.toggle {
+  width: 60px;
+  height: 100%;
+  color: #fff;
+  justify-self: flex-start;
+  text-decoration: none;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 header.header > a.toggle:hover {
   background-color: rgba(0, 0, 0, 0.2);
 }
