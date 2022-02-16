@@ -14,7 +14,7 @@ Vue.config.productionTip = false;
 // require("axios").defaults.headers.common["Authorization"] =
 //   "bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MiwibmFtZSI6Ik1hcmlhIFNpbHZhIiwiZW1haWwiOiJtYXJpYS5zaWx2YUBob3RtYWlsLmNvbSIsImFkbWluIjoiZmFsc2UiLCJpYXQiOjE2NDQ2MTU5NDQsImV4cCI6MTY0NDg3NTE0NH0.4y-Bt18EFbUKG9MgvFWIE1I82Lw9Wxs_I7DkEgn_X1o";
 require("axios").defaults.headers.common["Authorization"] =
-  "bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwibmFtZSI6IkVsYmVyIGNvc3RhIG1pc3NpYXMiLCJlbWFpbCI6ImVsYmVyLmNtQGhvdG1haWwuY29tIiwiYWRtaW4iOiJ0cnVlIiwiaWF0IjoxNjQ0NjM3NDUyLCJleHAiOjE2NDQ4OTY2NTJ9.ESHjYQevSQWtZLB-3CcSxik-giQtpwazDPrSLkIIaL4";
+  "bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwibmFtZSI6IkVsYmVyIENvc3RhIiwiZW1haWwiOiJlbGJlci5jbUBob3RtYWlsLmNvbSIsImFkbWluIjoidHJ1ZSIsImlhdCI6MTY0NTAwODUwMCwiZXhwIjoxNjQ1MjY3NzAwfQ.uVQS4UoFisBluGRYMN2NqSR8Rydig1MDbBzorp2UYEc";
 new Vue({
   store,
   router,

@@ -1,5 +1,5 @@
 <template>
-  <div class="user-admin">
+    <div class="user-admin">
         <b-form>
             <input id="user-id" type="hidden" v-model="user.id" />
             <b-row>
@@ -121,6 +121,10 @@ export default {
           this.reset();
         })
         .catch(showError);
+    },
+    loadUser(user, mode = "save") {
+      this.mode = mode;
+      this.user = { ...user };
     },
   },
   mounted() {
